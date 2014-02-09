@@ -46,7 +46,7 @@ function(Backbone, _) {
       _.each(res.feed.entry, function(entry) {
         // entry.title.$t = A1, B2, etc.
         var colName = entry.title.$t[0], //A
-            rowNum  = entry.title.$t[1]; //1
+            rowNum  = entry.title.$t.substr(1); //1
 
         if (!sheet[rowNum]) {
           sheet[rowNum] = [];
